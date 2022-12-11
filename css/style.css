@@ -1,0 +1,427 @@
+:root {
+    --main-color: white;
+  }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+main{
+    display: flex;
+}
+
+.sidebar{
+    background-color: #1C1F1B;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar img{
+    max-width: 4rem;
+    margin-bottom: 2rem;
+    filter: invert(100);
+}
+
+.sidebar button {
+    background-color: #363931;
+    border: none;
+    min-height: 3rem;
+    max-width: 3rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: 0.2s;
+}
+
+.sidebar .active{
+    border-left: var(--main-color) solid .2rem;
+}
+
+.sidebar button:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+
+.sidebar button:hover + span{
+    display: block;
+}
+
+.sidebar button i {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.navButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.option span{
+    display: none;
+    position: absolute;
+    left: 5rem;
+    background-color: #4C4E47;
+    padding: .4rem;
+    border-radius: .5rem;
+    font-size: .7rem;
+    box-shadow: .1rem .1rem .5rem black;
+}
+
+.currentColor{
+    width: 1rem;
+    height: 1rem;
+    background-color: #363931;
+}
+
+.colors{
+    display: none;
+    background-color: #363931;
+    border-radius: .5rem;
+    padding: .25rem;
+    gap: .25rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 52rem;
+    box-shadow: .1rem .1rem .5rem black;
+}
+
+.color{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.25rem;
+}
+
+.color:hover{
+    border: solid white 0.1rem;
+}
+
+.white{
+    background-color: white;
+}
+
+.white:hover{
+    border: solid black 0.1rem;
+}
+
+.red{
+    background-color: #ef233c;
+}
+
+.blue{
+    background-color: #219ebc;
+}
+
+.green{
+    background-color: #99d98c;
+}
+
+.purple{
+    background-color: #844cdf;
+}
+
+.content{
+    background-color: #282A23;
+    width: 100%;
+    min-height: 100%;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    background-color: #1C1F1B;
+    padding: 1rem;
+    gap: 2rem;
+    align-items: center;
+    width: 50%;
+    border-radius: .5rem;
+}
+
+.totalCheck{
+    display: flex;
+    gap: 1rem;
+}
+
+.infoContainer{
+    background-color: #363931;
+    border-radius: .5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.infoContainer h2 {
+    color: var(--main-color);
+}
+
+.checkouts{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    max-height: fit-content;
+}
+
+.checkoutLabel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkoutLabel span{
+    font-size: .8rem;
+    background-color: #363931;
+    padding: .4rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.orderAmount{
+    display: flex;
+    gap: .5rem;
+
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    background-color: #363931;
+    padding: .5rem;
+    border: var(--main-color) solid .1rem;
+    border-radius: .5rem;
+    gap: .25rem;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: #363931;
+    color: white;
+}
+
+.searchBar i{
+    color: var(--main-color);
+    font-size: .8rem;
+
+}
+
+.searchBar input:focus{
+    outline: none;
+}
+
+.orders{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    height: 36.25rem;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-right: .5rem;
+}
+
+.orders::-webkit-scrollbar{
+    height: 100%;
+    border-radius: .5rem;
+    width: .4rem;
+    background-color: #363931;
+}
+
+.orders::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: .5rem;
+}
+
+.order{
+    display: flex;
+    width: 100%;
+    border: var(--main-color) solid .1rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #363931;
+}
+
+.order img{
+    max-width: 4rem;
+    border-radius: .5rem;
+}
+
+.order i{
+    padding: .5rem;
+    border-radius: .5rem;
+    border: var(--main-color) solid .1rem;
+    color: var(--main-color);
+    transition: 0.2s;
+}
+
+.order i:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+
+.sneakerInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.botInfo{
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+    border-radius: .5rem;
+    background-color: #363931;
+    width: 100%;
+}
+
+.updates{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: .5rem;
+    width: 100%;
+    background-color: #363931;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.updates button {
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: var(--main-color) solid .1rem;
+    color: var(--main-color);
+    transition: .2s;
+}
+
+.updates button:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.updates span{
+    color: gray;
+    font-size: .8rem;
+}
+
+.profile h2{
+    color: var(--main-color);
+}
+
+.profile img{
+    width: 5rem;
+}
+
+.keyContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.keyContainer i {
+    color: var(--main-color);
+    padding: .5rem;
+    border: var(--main-color) solid .1rem;
+    border-radius: .5rem;
+    transition: .2s;
+}
+
+.keyContainer i:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+#userKey{
+    filter: blur(.4rem);
+}
+
+.webhook{
+    background-color: #363931;
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.webhook span {
+    color: gray;
+    font-size: .9rem;
+}
+
+.webhook .searchBar #webSuccess{
+    color: #99d98c;
+}
+
+.webhook .searchBar #webFail{
+    color: #ef233c;
+}
+
+.webhook .searchBar input{
+    width: 100%;
+}
+
+.webhookContainer{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.buttonTest{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonTest button {
+    padding: .5rem;
+    background-color: transparent;
+    border: var(--main-color) solid .1rem;
+    color: var(--main-color);
+    border-radius: .5rem;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.buttonTest button:hover{
+    background-color: gray;
+    cursor: pointer;
+}

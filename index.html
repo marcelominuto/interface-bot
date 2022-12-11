@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot - Teste</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./scripts/script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+            
+            <div class="navButtons">
+                <img src="./images/logo.png" alt="logo-bot">
+
+                <div class="option">
+                    <button id="dashboardBtn" class="active">
+                        <i class="fa-solid fa-house"></i>
+                    </button>
+                    <span>Home</span>
+                </div>
+    
+                <div class="option">
+                    <button id="taskBtn">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                    <span>Tasks</span>
+                </div>
+    
+                <div class="option">
+                    <button id="accountBtn">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </button>
+                    <span>Contas</span>
+                </div>
+    
+                <div class="option">
+                    <button id="cardBtn">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </button>
+                    <span>Cartões</span>
+                </div>
+        
+                <div class="option">
+                    <button id="proxyBtn">
+                        <i class="fa-solid fa-globe"></i>
+                    </button>
+                    <span>Proxies</span>
+                </div>
+            </div>
+
+            <div class="config">
+                <button id="currentColor">
+                    <i class="fa-solid fa-palette"></i>
+                </button>
+                <div class="colors">
+                    <div class="color white"></div>
+                    <div class="color red"></div>
+                    <div class="color blue"> </div>
+                    <div class="color green"> </div>
+                    <div class="color purple"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="info">
+                <h1>Dashboard</h1>
+                <div class="totalCheck">
+                    <div class="infoContainer">
+                        <span class="title">Total Gasto</span>
+                        <h2 id="valorTotal">R$ 33.497,97</h2>
+                        <span class="sinceTo">18 de outubro - 2 de dezembro</span>
+                    </div>
+                    <div class="infoContainer">
+                        <span class="title">Checkouts</span>
+                        <h2 id="valorTotal">41</h2>
+                        <span class="sinceTo">18 de outubro - 2 de dezembro</span>
+                    </div>
+                    <div class="infoContainer">
+                        <span class="title">Modelo mais comprado</span>
+                        <h2 id="valorTotal">Nike Dunk Low Black/White</h2>
+                        <span class="sinceTo">27 pares</span>
+                    </div>
+                </div>
+                <div class="checkouts">
+                    <div class="checkoutLabel">
+                        <div class="orderAmount">
+                            <h2>Checkouts</h2>
+                            <span>41</span>
+                        </div>
+                        <div class="searchBar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" name="search" id="inputSearch">
+                        </div>
+                    </div>
+                    <div class="orders">
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                        <div class="order">
+                            <img src="./images/dunkblack.jpeg" alt="">
+                            <div class="sneakerInfo">
+                                <h4 id="model">Nike Dunk Low Black/White</h4>
+                                <span id="price">R$ 899,99</span>
+                            </div>
+                            <span id="account">Conta</span>
+                            <span id="size">43</span>
+                            <i class="fa-sharp fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="botInfo">
+                    <div class="profile">
+                        <img src="./images/profile.webp" alt="">
+                        <div class="userInfo">
+                            <span>Bem-vindo!</span>
+                            <h2>Nome</h2>
+                        </div>
+                        <div class="userInfo">
+                            <span>Plano</span>
+                            <h2>Starter</h2>
+                        </div>
+                        <div class="userInfo">
+                            <span>Key</span>
+                            <div class="keyContainer">
+                                <h2 id="userKey">adw7dwa8-dj8h9jgha-4hf48h</h2>
+                                <i class="fa-sharp fa-solid fa-eye" id="removeBlur"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="updates">
+                        <h2>Updates Automáticos</h2>
+                        <button>
+                            <i class="fa-solid fa-download"></i>
+                            Verificar Atualizações
+                        </button>
+                        <span>Versão 2.4.1</span>
+                    </div>
+                </div>
+                <div class="webhook">
+                    <h2>Webhooks</h2>
+                    <div class="webhookContainer">
+                        <span>Webhook de sucesso</span>
+                        <div class="searchBar">
+                            <i class="fa-brands fa-discord" id="webSuccess"></i>
+                            <input type="search" name="search" id="inputSearch">
+                        </div>
+                    </div>
+                    <div class="webhookContainer">
+                        <span>Webhook de falha</span>
+                        <div class="searchBar">
+                            <i class="fa-brands fa-discord" id="webFail"></i>
+                            <input type="search" name="search" id="inputSearch">
+                        </div>
+                    </div>
+                    <div class="buttonTest">
+                        <button id="sendTest">
+                            <i class="fa-solid fa-message"></i>
+                            Enviar teste
+                        </button>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

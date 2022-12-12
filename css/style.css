@@ -10,132 +10,6 @@ main{
     display: flex;
 }
 
-.sidebar{
-    background-color: #1C1F1B;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.sidebar img{
-    max-width: 4rem;
-    margin-bottom: 2rem;
-    filter: invert(100);
-}
-
-.sidebar button {
-    background-color: #363931;
-    border: none;
-    min-height: 3rem;
-    max-width: 3rem;
-    padding: 1rem;
-    border-radius: .5rem;
-    transition: 0.2s;
-}
-
-.sidebar .active{
-    border-left: var(--main-color) solid .2rem;
-}
-
-.sidebar button:hover{
-    cursor: pointer;
-    background-color: grey;
-}
-
-.sidebar button:hover + span{
-    display: block;
-}
-
-.sidebar button i {
-    font-size: 1rem;
-    color: var(--main-color);
-}
-
-.navButtons{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.option{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-    align-items: center;
-    justify-content: center;
-    font-size: .8rem;
-    font-weight: 700;
-}
-
-.option span{
-    display: none;
-    position: absolute;
-    left: 5rem;
-    background-color: #4C4E47;
-    padding: .4rem;
-    border-radius: .5rem;
-    font-size: .7rem;
-    box-shadow: .1rem .1rem .5rem black;
-}
-
-.currentColor{
-    width: 1rem;
-    height: 1rem;
-    background-color: #363931;
-}
-
-.colors{
-    display: none;
-    background-color: #363931;
-    border-radius: .5rem;
-    padding: .25rem;
-    gap: .25rem;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 52rem;
-    box-shadow: .1rem .1rem .5rem black;
-}
-
-.color{
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 0.25rem;
-}
-
-.color:hover{
-    border: solid white 0.1rem;
-}
-
-.white{
-    background-color: white;
-}
-
-.white:hover{
-    border: solid black 0.1rem;
-}
-
-.red{
-    background-color: #ef233c;
-}
-
-.blue{
-    background-color: #219ebc;
-}
-
-.green{
-    background-color: #99d98c;
-}
-
-.purple{
-    background-color: #844cdf;
-}
-
 .content{
     background-color: #282A23;
     width: 100%;
@@ -424,4 +298,257 @@ main{
 .buttonTest button:hover{
     background-color: gray;
     cursor: pointer;
+}
+
+/* Tasks Style */
+
+.tasksContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #1C1F1B;
+    padding: 1rem;
+    gap: 2rem;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.taskHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #363931;
+}
+
+.taskHeadTitle{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.taskHeadActions{
+    display: flex;
+    padding: .5rem;
+    gap: 2rem;
+    /* width: 100%;
+    max-width: 35rem; */
+    justify-content: center;
+}
+
+.functionBtn{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    transition: .2s;
+    text-align: center;
+    font-weight: 700;
+}
+
+.functionBtn:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+#addTaskBtn{
+    border: .15rem solid #99d98c;
+    color: #99d98c;
+}
+
+#openLogsBtn{
+    border: .15rem solid #219ebc;
+    color: #219ebc;
+}
+
+
+#shortcutAddTask{
+    padding: .25rem;
+    font-size: .6rem;
+    background-color: #1C1F1B;
+    border-radius: .2rem;
+}
+
+#actions{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    padding: .5rem;
+}
+
+.actionBtn{
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .8rem;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    color: white;
+    transition: .2s;
+} 
+
+#playTasks{
+    background-color: #99d98c;
+}
+
+#playTasks:hover{
+    background-color: #67a35b;
+    cursor: pointer;
+}
+
+#stopTasks{
+    background-color: #844cdf;
+}
+
+#stopTasks:hover{
+    background-color: #5d32a3;
+    cursor: pointer;
+}
+
+#deleteTasks{
+    background-color: #ef233c;
+}
+
+#deleteTasks:hover{
+    background-color: #c0182c;
+    cursor: pointer;
+}
+
+.tasksWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 46.25rem;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #363931;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-right: .5rem;
+}
+
+.tasksWrapper::-webkit-scrollbar{
+height: 100%;
+border-radius: .5rem;
+width: .4rem;
+background-color: gray;
+}
+
+.tasksWrapper::-webkit-scrollbar-thumb{
+background-color: var(--main-color);
+border-radius: .5rem;
+}
+
+.task{
+    display: grid;
+    grid-template-columns: 15rem auto 15rem 15rem;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border: .1rem solid var(--main-color);
+    border-radius: .5rem;
+}
+
+#taskFields{
+    border-radius: 0;
+    border: none;
+    border-bottom: .2rem solid gray;
+}
+
+#taskFields span{
+    font-size: .7rem;
+    font-weight: 700;
+    color: gray;
+}
+
+.taskProduct{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#productName{
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+#productPrice{
+    background-color: #1C1F1B;
+    font-size: .8rem;
+    font-weight: 700;
+    padding: .3rem;
+    border-radius: .5rem;
+    color: var(--main-color);
+}
+
+.taskInfo{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 10rem 10rem 10rem 12rem;
+    font-size: .9rem;
+}
+
+#skuInput{
+    background-color: transparent;
+    border: .1rem solid gray;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+#skuInput::placeholder {
+    text-align: center; 
+    font-weight: 700;
+ }
+
+.taskStatus{
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #99d98c;
+}
+
+.taskActions{
+    display: flex;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.insideTaskBtn{
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.insideTaskBtn:hover{
+    background-color: gray;
+}
+
+.taskActions #start{
+    border: .1rem solid #99d98c;
+    color: #99d98c;
+}
+
+.taskActions #stop{
+    border: .1rem solid #844cdf;
+    color: #844cdf;
+}
+
+.taskActions #clear{
+    border: .1rem solid #219ebc;
+    color: #219ebc;
+}
+
+.taskActions #edit{
+    border: .1rem solid #ecd54f;
+    color: #ecd54f;
+}
+
+.taskActions .delete{
+    border: .1rem solid #ef233c;
+    color: #ef233c;
 }

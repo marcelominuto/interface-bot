@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot - Tasks</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/tasks.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+            
+            <div class="navButtons">
+                <img src="../images/logo.png" alt="logo-bot">
+
+                <div class="option">
+                    <a href="../index.html" id="dashboardBtn">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                    <span>Home</span>
+                </div>
+    
+                <div class="option">
+                    <a href="#" id="taskBtn" class="active">
+                        <i class="fa-solid fa-list"></i>
+                    </a>
+                    <span>Tasks</span>
+                </div>
+    
+                <div class="option">
+                    <a href="./index.html" id="accountBtn">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </a>
+                    <span>Contas</span>
+                </div>
+    
+                <div class="option">
+                    <a href="./index.html" id="cardBtn">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </a>
+                    <span>Cartões</span>
+                </div>
+        
+                <div class="option">
+                    <a href="./index.html" id="proxyBtn">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <span>Proxies</span>
+                </div>
+            </div>
+
+            <div class="config">
+                <button id="currentColor">
+                    <i class="fa-solid fa-palette"></i>
+                </button>
+                <div class="colors">
+                    <div class="color white"></div>
+                    <div class="color red"></div>
+                    <div class="color blue"> </div>
+                    <div class="color green"> </div>
+                    <div class="color purple"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="tasksContainer">
+                <div class="taskHeader">
+                    <div class="taskHeadTitle">
+                        <h1>Tasks</h1>
+                        <span id="tasksNumber">0 Tarefas</span>
+                    </div>
+                    <div class="taskHeadActions">
+                        <div class="functionBtn" id="addTaskBtn">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Adicionar task</span>
+                            <span id="shortcutAddTask">F1</span>
+                        </div>
+                        <div id="actions">
+                            <button class="actionBtn" id="playTasks">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <button class="actionBtn" id="stopTasks">
+                                <i class="fa-solid fa-stop"></i>
+                            </button>
+                            <button class="actionBtn" id="deleteTasks">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="functionBtn" id="openLogsBtn">
+                            <i class="fa-solid fa-file"></i>
+                            <span>Log</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasksWrapper">
+                    <div class="task" id="taskFields">
+                        <div class="taskProduct">
+                            <span>Produto</span>
+                        </div>
+                        <div class="taskInfo">
+                            <div class="conta">
+                                <span>Conta</span>
+                            </div>
+                            <div class="payment">
+                                <span>Pagamento</span>
+                            </div>
+                            <div class="proxy">
+                                <span>Proxy</span>
+                            </div>
+                            <div class="sku">
+                                <span>SKU</span>
+                            </div>
+                        </div>
+                        <div class="taskStatus">
+                            <span>Status</span>
+                        </div>
+                        <div class="taskActions">
+                            <span>Ações</span>
+                        </div>
+                    </div>
+                    <!-- <div class="task">
+                        <div class="taskProduct">
+                            <span id="productName">Sem produto</span>
+                            <div class="price">
+                                <span id="productPrice">R$ 0,00</span>
+                            </div>
+                        </div>
+                        <div class="taskInfo">
+                            <div class="conta">
+                                <span>Marcelo</span>
+                           </div>
+                            <div class="payment">
+                                <span>Cartão Topate</span>
+                            </div>
+                            <div class="proxy">
+                                <span>Oculus</span>
+                            </div>
+                            <div class="sku">
+                                <input type="text" name="sku" id="skuInput" placeholder="SKU">
+                            </div>
+                        </div>
+                        <div class="taskStatus">
+                            <span>Pronto</span>
+                        </div>
+                        <div class="taskActions">
+                            <button class="actionBtn insideTaskBtn" id="start">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <button class="actionBtn insideTaskBtn" id="stop">
+                                <i class="fa-solid fa-stop"></i>
+                            </button>
+                            <button class="actionBtn insideTaskBtn" id="clear">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                            <button class="actionBtn insideTaskBtn" id="edit">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="actionBtn insideTaskBtn" id="delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

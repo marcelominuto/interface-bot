@@ -1,0 +1,153 @@
+.sidebar{
+    background-color: #1C1F1B;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar img{
+    max-width: 4rem;
+    margin-bottom: 2rem;
+    filter: invert(100);
+}
+
+.sidebar a {
+    background-color: #363931;
+    border: none;
+    min-height: 3rem;
+    max-width: 3rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: 0.2s;
+}
+
+.sidebar .active{
+    border-left: var(--main-color) solid .2rem;
+}
+
+.sidebar a:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+
+.sidebar a:hover + span{
+    display: block;
+}
+
+.sidebar a i {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.navButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.option span{
+    display: none;
+    position: absolute;
+    left: 5rem;
+    background-color: #4C4E47;
+    padding: .4rem;
+    border-radius: .5rem;
+    font-size: .7rem;
+    box-shadow: .1rem .1rem .5rem black;
+}
+
+.sidebar button {
+    background-color: #363931;
+    border: none;
+    min-height: 3rem;
+    max-width: 3rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: 0.2s;
+}
+
+.sidebar .active{
+    border-left: var(--main-color) solid .2rem;
+}
+
+.sidebar button:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+
+.sidebar button:hover + span{
+    display: block;
+}
+
+.sidebar button i {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.currentColor{
+    width: 1rem;
+    height: 1rem;
+    background-color: #363931;
+}
+
+.colors{
+    display: none;
+    background-color: #363931;
+    border-radius: .5rem;
+    padding: .25rem;
+    gap: .25rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5rem;
+    box-shadow: .1rem .1rem .5rem black;
+}
+
+.color{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.25rem;
+}
+
+.color:hover{
+    border: solid white 0.1rem;
+}
+
+.white{
+    background-color: white;
+}
+
+.white:hover{
+    border: solid black 0.1rem;
+}
+
+.red{
+    background-color: #ef233c;
+}
+
+.blue{
+    background-color: #219ebc;
+}
+
+.green{
+    background-color: #99d98c;
+}
+
+.purple{
+    background-color: #844cdf;
+}

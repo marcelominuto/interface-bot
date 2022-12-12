@@ -5,10 +5,6 @@ const colorsRef = document.querySelector(".colors");
 
 const colorOptionRef = document.querySelectorAll(".color");
 
-const userKeyRef = document.getElementById("userKey");
-const removeBlurRef = document.getElementById("removeBlur");
-
-
 colorBtnRef.addEventListener("click", (event) =>{
     event.preventDefault();
 
@@ -54,14 +50,4 @@ function changeColor(color){
     // alert("Cor: " + getComputedStyle(rootRef).getPropertyValue("--main-color"))
 }
 
-removeBlurRef.addEventListener("click", (event) =>{
-
-    let keyFilter = getComputedStyle(userKeyRef).filter;
-
-    if(keyFilter === "none"){
-        userKeyRef.style.filter = "blur(.4rem)"
-    } else {
-        userKeyRef.style.filter = "none"
-    }
-})
 
